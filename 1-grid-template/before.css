@@ -1,0 +1,12 @@
+.Page {
+  display: grid;
+  grid-template:
+    "head head" 1fr
+    "nav  main" minmax(100px, 1fr)
+    "foot foot" 2fr /
+    1fr   100px;
+}
+.Page_Head { grid-area: head; }
+.Page_Nav { grid-area: nav; }
+.Page_Main { grid-area: main; }
+.Page_Foot { grid-area: foot; }

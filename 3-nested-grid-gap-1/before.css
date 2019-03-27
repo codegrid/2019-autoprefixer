@@ -1,0 +1,22 @@
+.Grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 50px;
+}
+/*
+  画面幅が600pxまではgrid-gapを20pxにする
+  ただし、これはIEでは機能しません
+*/
+@media (max-width: 600px) {
+  .Grid {
+    grid-gap: 20px;
+  }
+}
+/*
+  .small-gapが付与されたらgrid-gapを20pxにする
+  ただし、これはIEでは機能しません
+*/
+.Grid.-small-gap {
+  grid-gap: 20px;
+}

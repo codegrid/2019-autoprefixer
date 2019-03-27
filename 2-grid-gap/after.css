@@ -1,0 +1,16 @@
+.Page {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 10px 20px;
+  -ms-grid-rows: 1fr 10px minmax(100px, 1fr) 10px 2fr;
+  -ms-grid-columns: 1fr 20px 100px;
+      grid-template:
+    "head head" 1fr
+    "nav  main" minmax(100px, 1fr)
+    "foot foot" 2fr /
+    1fr   100px;
+}
+.Page_Head { -ms-grid-row: 1; -ms-grid-column: 1; -ms-grid-column-span: 3; grid-area: head; }
+.Page_Nav { -ms-grid-row: 3; -ms-grid-column: 1; grid-area: nav; }
+.Page_Main { -ms-grid-row: 3; -ms-grid-column: 3; grid-area: main; }
+.Page_Foot { -ms-grid-row: 5; -ms-grid-column: 1; -ms-grid-column-span: 3; grid-area: foot; }
